@@ -1,0 +1,128 @@
+#ifndef Pulse_pch
+#define Pulse_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import "UIView+DCAnimationKit.h"
+
+#define BASE_URL            @"http://petropulse.azurewebsites.net"
+//#define BASE_URL            @"http://petropulsesb.azurewebsites.net"
+//#define BASE_URL            @"http://10.70.10.15"
+#define ASSETS_BASE_URL    @"/assets/"
+// NSUserDefaults key strings
+#define S_UserID            @"userid"
+#define S_Email             @"email"
+#define S_Password          @"password"
+#define S_ActivateTouchID   @"activateTouchID"
+#define S_TouchIDEmail      @"touchID_email"
+#define S_TouchIDPassword   @"touchID_password"
+#define S_SyncPassword      @"sync_password"
+
+#define S_Routes            @"routes"
+#define S_Operatings        @"operatings"
+#define S_Owns              @"owns"
+#define S_EmptyPermission   @"emptypermission"
+#define S_Department        @"department"
+#define S_Downloaded        @"downloaded"
+#define S_AccessToken       @"accessToken"
+
+#define S_DaysToSync        @"DaysToSync"
+#define S_SyncInterval      @"SyncInterval"
+#define S_DownloadAllChron  @"DownloadAllChron"
+#define S_SyncLastTime      @"SyncLastTime"
+
+// api links
+#define Login           @"auth/login"
+#define LoginWithUserID @"auth/loginwithuserid"
+#define SignUp          @"auth/signup"
+#define ChangePassword  @"auth/changepassword"
+#define ForgotPassword  @"auth/forgotpassword"
+
+#define D_Personnels    @"base/getpersonnel"
+#define D_LeaseRoutes   @"base/getallleaseroutes"
+#define D_ListCompanies @"base/getalllistcompanies"
+#define D_ScheduleTypes @"base/getallscheduletypes"
+
+#define D_AllLease          @"production/getalllease"
+#define D_PulseProdFields   @"production/getprodfields"
+#define D_Productions       @"production/getproductions"
+#define D_ProductionFields  @"production/getproductionfields"
+#define D_ProductionAvgs    @"production/getproductionavg"
+#define D_ProductionAvgField @"production/getproductionavgfield"
+#define D_Tanks             @"production/tanks/gettanks"
+#define D_TankGaugeEntries  @"production/tanks/gettankgaugeentry"
+#define D_TankStrappings    @"production/tanks/gettankstrappings"
+#define D_RunTickets        @"production/tanks/getruntickets"
+
+#define D_ListMeterProblem  @"base/getlistmeterproblem"
+#define D_Meters            @"production/meters/getmeters"
+#define D_GasMeterData      @"production/meters/getgasmeterdata"
+#define D_WaterMeterData    @"production/meters/getwatermeterdata"
+
+#define D_ListWellProblem   @"base/getlistwellproblem"
+#define D_WellList          @"production/wells/getwelllist"
+#define D_WellheadData      @"production/wells/getwellheaddata"
+
+#define D_WBDCasingTubing   @"production/WBD/getcasingtubing"
+#define D_WBDSurveys        @"production/WBD/getsurveys"
+#define D_WBDPlugs          @"production/WBD/getplugs"
+#define D_WBDRods           @"production/WBD/getrods"
+#define D_WBDPumps          @"production/WBD/getpumps"
+#define D_WBDTreatments     @"production/WBD/gettreatments"
+#define D_WBDPerfs          @"production/WBD/getperfs"
+#define D_WBDInfo           @"production/WBD/getinfo"
+#define D_WBDInfoSource     @"production/WBD/getinfosource"
+
+#define D_Invoices      @"operations/invoices/getinvoices"
+//#define D_InvoicesSpec      @"operations/invoices/getspecificinvoices"
+#define D_Schedules     @"operations/schedules/getschedules"
+
+#define D_LeasesWithPermission  @"production/getleaseswithpermission"
+#define D_InvoiceAccounts       @"operations/invoices/getinvoiceaccounts"
+
+#define D_RigReports        @"operations/rigreports/getrigreports"
+#define D_RigReportsWithWell        @"operations/rigreports/getrigreportswithwelllist"
+#define D_RigReportsRods    @"operations/rigreports/getrigreportsrods"
+#define D_RodSize           @"operations/rigreports/getrodsize"
+#define D_RodType           @"operations/rigreports/getrodtype"
+#define D_RodLength         @"operations/rigreports/getrodlength"
+
+#define D_RigReportsPump    @"operations/rigreports/getrigreportspump"
+#define D_PumpSize          @"operations/rigreports/getpumpsize"
+#define D_PumpType          @"operations/rigreports/getpumptype"
+
+#define D_RigReportsTubing  @"operations/rigreports/getrigreportstubing"
+#define D_TubingSize        @"operations/rigreports/gettubingsize"
+#define D_TubingType        @"operations/rigreports/gettubingtype"
+#define D_TubingLength      @"operations/rigreports/gettubinglength"
+
+#define D_WaterPumpInfo     @"toolbox/getwaterpumpinfo"
+
+// uploading apis
+#define U_Invoices          @"operations/invoices/uploadinvoices"
+#define U_InvoicesDetail    @"operations/invoices/uploadinvoicesdetail"
+#define U_InvoicesPersonnel @"operations/invoices/uploadinvoicespersonnel"
+
+#define U_Schedules         @"operations/schedules/uploadschedules"
+#define U_TankGaugeEntries  @"production/tanks/uploadtankgaugeentries"
+#define U_RunTickets        @"production/tanks/uploadruntickets"
+
+#define U_GasMeterData      @"production/meters/uploadgasmeterdata"
+#define U_WaterMeterData    @"production/meters/uploadwatermeterdata"
+
+#define U_WellheadData      @"production/wells/uploadwellheaddata"
+
+#define U_RigReports        @"operations/rigreports/uploadrigreports"
+#define U_RigReportsRods    @"operations/rigreports/uploadrigreportsrods"
+#define U_RigReportsPump    @"operations/rigreports/uploadrigreportspump"
+#define U_RigReportsTubing  @"operations/rigreports/uploadrigreportstubing"
+
+// iOS Version Checking
+#define SYSTEM_VERSION_EQUAL_TO(v)                  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedSame)
+#define SYSTEM_VERSION_GREATER_THAN(v)              ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedDescending)
+#define SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(v)  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedAscending)
+#define SYSTEM_VERSION_LESS_THAN(v)                 ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedAscending)
+#define SYSTEM_VERSION_LESS_THAN_OR_EQUAL_TO(v)     ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedDescending)
+
+#endif /* Pulse_pch */
