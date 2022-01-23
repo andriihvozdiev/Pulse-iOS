@@ -1,0 +1,711 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14903" systemVersion="18G103" minimumToolsVersion="Automatic" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
+    <entity name="GasMeterData" representedClassName="GasMeterData" syncable="YES">
+        <attribute name="checkTime" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="comments" optional="YES" attributeType="String"/>
+        <attribute name="currentFlow" optional="YES" attributeType="String"/>
+        <attribute name="dataID" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="deviceID" optional="YES" attributeType="String"/>
+        <attribute name="diffPressure" optional="YES" attributeType="String"/>
+        <attribute name="downloaded" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="entryTime" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="idGasMeter" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="lease" optional="YES" attributeType="String"/>
+        <attribute name="linePressure" optional="YES" attributeType="String"/>
+        <attribute name="meterCumVol" optional="YES" attributeType="String"/>
+        <attribute name="meterProblem" optional="YES" attributeType="String"/>
+        <attribute name="userid" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="wellNumber" optional="YES" attributeType="String"/>
+        <attribute name="yesterdayFlow" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="InvoiceAccounts" representedClassName="InvoiceAccounts" syncable="YES">
+        <attribute name="account" optional="YES" attributeType="String"/>
+        <attribute name="acctID" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="outbillLookup" optional="YES" attributeType="String"/>
+        <attribute name="subAccount" optional="YES" attributeType="String"/>
+        <attribute name="subAcctID" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="subAcctTimeUnits" optional="YES" attributeType="String"/>
+        <attribute name="unitCost" optional="YES" attributeType="String"/>
+        <attribute name="unitCostOutCharge" optional="YES" attributeType="String"/>
+        <attribute name="wpExpAcct" optional="YES" attributeType="String"/>
+        <attribute name="wpExpJournal" optional="YES" attributeType="String"/>
+        <attribute name="wpExpReference" optional="YES" attributeType="String"/>
+        <attribute name="wpIncAcct" optional="YES" attributeType="String"/>
+        <attribute name="wpIncJournal" optional="YES" attributeType="String"/>
+        <attribute name="wpIncReference" optional="YES" attributeType="String"/>
+        <attribute name="wpIncSubAcct" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="Invoices" representedClassName="Invoices" syncable="YES">
+        <attribute name="app0Emp" optional="YES" attributeType="String"/>
+        <attribute name="app1Emp" optional="YES" attributeType="String"/>
+        <attribute name="app2Emp" optional="YES" attributeType="String"/>
+        <attribute name="approval0" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="approval1" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="approval2" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="approvalDt0" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="approvalDt1" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="approvalDt2" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="comments" optional="YES" attributeType="String"/>
+        <attribute name="company" optional="YES" attributeType="String"/>
+        <attribute name="dailyCost" optional="YES" attributeType="String"/>
+        <attribute name="deleted" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="deviceID" optional="YES" attributeType="String"/>
+        <attribute name="downloaded" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="export" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="invoiceAppID" optional="YES" attributeType="String"/>
+        <attribute name="invoiceDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="invoiceID" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="invoiceImages" optional="YES" attributeType="Transformable"/>
+        <attribute name="lease" optional="YES" attributeType="String"/>
+        <attribute name="noBill" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="noBillDt" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="noBillEmp" optional="YES" attributeType="String"/>
+        <attribute name="opCompany" optional="YES" attributeType="String"/>
+        <attribute name="outsideBill" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="outsideBillDt" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="outsideBillEmp" optional="YES" attributeType="String"/>
+        <attribute name="ownCompany" optional="YES" attributeType="String"/>
+        <attribute name="rodComments" optional="YES" attributeType="String"/>
+        <attribute name="route" optional="YES" attributeType="String"/>
+        <attribute name="totalCost" optional="YES" attributeType="String"/>
+        <attribute name="tubingComments" optional="YES" attributeType="String"/>
+        <attribute name="userid" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="wellNumber" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="InvoicesDetail" representedClassName="InvoicesDetail" syncable="YES" codeGenerationType="class">
+        <attribute name="account" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="accountSub" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="accountTime" optional="YES" attributeType="String"/>
+        <attribute name="accountUnit" optional="YES" attributeType="String"/>
+        <attribute name="deleted" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="downloaded" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="invoiceAppID" optional="YES" attributeType="String"/>
+        <attribute name="invoiceDetailID" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="invoiceID" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="InvoicesPersonnel" representedClassName="InvoicesPersonnel" syncable="YES" codeGenerationType="class">
+        <attribute name="deleted" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="downloaded" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="invoiceAppID" optional="YES" attributeType="String"/>
+        <attribute name="invoiceID" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="invoicePersonnelID" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="userID" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="LeaseRoutes" representedClassName="LeaseRoutes" syncable="YES">
+        <attribute name="routeID" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="routeName" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="ListAssetLocations" representedClassName="ListAssetLocations" syncable="YES">
+        <attribute name="codeProperty" optional="YES" attributeType="String"/>
+        <attribute name="grandparentPropNum" optional="YES" attributeType="String"/>
+        <attribute name="parentPropNum" optional="YES" attributeType="String"/>
+        <attribute name="propNum" optional="YES" attributeType="String"/>
+        <attribute name="propType" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="ListCompany" representedClassName="ListCompany" syncable="YES">
+        <attribute name="company" optional="YES" attributeType="String"/>
+        <attribute name="companyCode" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="ListMeterProblem" representedClassName="ListMeterProblem" syncable="YES">
+        <attribute name="reason" optional="YES" attributeType="String"/>
+        <attribute name="reasonCode" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="ListWellProblem" representedClassName="ListWellProblem" syncable="YES">
+        <attribute name="reason" optional="YES" attributeType="String"/>
+        <attribute name="reasonCode" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="Meters" representedClassName="Meters" syncable="YES">
+        <attribute name="active" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="appName" optional="YES" attributeType="String"/>
+        <attribute name="gasMeterID" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="meterID" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="meterLease" optional="YES" attributeType="String"/>
+        <attribute name="meterName" optional="YES" attributeType="String"/>
+        <attribute name="meterType" optional="YES" attributeType="String"/>
+        <attribute name="meterWell" optional="YES" attributeType="String"/>
+        <attribute name="waterMeterID" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="Personnel" representedClassName="Personnel" syncable="YES">
+        <attribute name="active" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="department" optional="YES" attributeType="String"/>
+        <attribute name="email" optional="YES" attributeType="String"/>
+        <attribute name="employeeName" optional="YES" attributeType="String"/>
+        <attribute name="invPersonnel" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="noBillApp" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="outsideBillApp" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="primaryApp" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="secondaryApp" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="userid" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="Production" representedClassName="Production" syncable="YES">
+        <attribute name="allocatedVolume" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="comments" optional="YES" attributeType="String"/>
+        <attribute name="gasComments" optional="YES" attributeType="String"/>
+        <attribute name="gasVol" optional="YES" attributeType="String"/>
+        <attribute name="lease" optional="YES" attributeType="String"/>
+        <attribute name="leaseName" optional="YES" attributeType="String"/>
+        <attribute name="oilComments" optional="YES" attributeType="String"/>
+        <attribute name="oilVol" optional="YES" attributeType="String"/>
+        <attribute name="prodID" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="productionDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="waterComments" optional="YES" attributeType="String"/>
+        <attribute name="waterVol" optional="YES" attributeType="String"/>
+        <attribute name="wellheadComments" optional="YES" attributeType="String"/>
+        <attribute name="wellheadData" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="ProductionAvg" representedClassName="ProductionAvg" syncable="YES">
+        <attribute name="allocatedVolume" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="gas7" optional="YES" attributeType="String"/>
+        <attribute name="gas30" optional="YES" attributeType="String"/>
+        <attribute name="gas365" optional="YES" attributeType="String"/>
+        <attribute name="gasP30" optional="YES" attributeType="String"/>
+        <attribute name="lease" optional="YES" attributeType="String"/>
+        <attribute name="leaseName" optional="YES" attributeType="String"/>
+        <attribute name="oil7" optional="YES" attributeType="String"/>
+        <attribute name="oil30" optional="YES" attributeType="String"/>
+        <attribute name="oil365" optional="YES" attributeType="String"/>
+        <attribute name="oilP30" optional="YES" attributeType="String"/>
+        <attribute name="prodID" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="productionDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="water7" optional="YES" attributeType="String"/>
+        <attribute name="water30" optional="YES" attributeType="String"/>
+        <attribute name="water365" optional="YES" attributeType="String"/>
+        <attribute name="waterP30" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="ProductionAvgField" representedClassName="ProductionAvgField" syncable="YES">
+        <attribute name="allocatedVolume" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="gas7" optional="YES" attributeType="String"/>
+        <attribute name="gas30" optional="YES" attributeType="String"/>
+        <attribute name="gas365" optional="YES" attributeType="String"/>
+        <attribute name="gasP30" optional="YES" attributeType="String"/>
+        <attribute name="lease" optional="YES" attributeType="String"/>
+        <attribute name="leaseField" optional="YES" attributeType="String"/>
+        <attribute name="leaseName" optional="YES" attributeType="String"/>
+        <attribute name="oil7" optional="YES" attributeType="String"/>
+        <attribute name="oil30" optional="YES" attributeType="String"/>
+        <attribute name="oil365" optional="YES" attributeType="String"/>
+        <attribute name="oilP30" optional="YES" attributeType="String"/>
+        <attribute name="prodID" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="productionDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="water7" optional="YES" attributeType="String"/>
+        <attribute name="water30" optional="YES" attributeType="String"/>
+        <attribute name="water365" optional="YES" attributeType="String"/>
+        <attribute name="waterP30" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="ProductionField" representedClassName="ProductionField" syncable="YES" codeGenerationType="class">
+        <attribute name="comments" optional="YES" attributeType="String"/>
+        <attribute name="gasComments" optional="YES" attributeType="String"/>
+        <attribute name="gasVol" optional="YES" attributeType="String"/>
+        <attribute name="lease" optional="YES" attributeType="String"/>
+        <attribute name="leaseField" optional="YES" attributeType="String"/>
+        <attribute name="leaseName" optional="YES" attributeType="String"/>
+        <attribute name="oilComments" optional="YES" attributeType="String"/>
+        <attribute name="oilVol" optional="YES" attributeType="String"/>
+        <attribute name="prodID" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="productionDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="waterComments" optional="YES" attributeType="String"/>
+        <attribute name="waterVol" optional="YES" attributeType="String"/>
+        <attribute name="wellheadComments" optional="YES" attributeType="String"/>
+        <attribute name="wellheadData" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="PulseProdField" representedClassName="PulseProdField" syncable="YES" codeGenerationType="class">
+        <attribute name="fieldName" optional="YES" attributeType="String"/>
+        <attribute name="gasCalcType" optional="YES" attributeType="String"/>
+        <attribute name="gasVol" optional="YES" attributeType="String"/>
+        <attribute name="lease" optional="YES" attributeType="String"/>
+        <attribute name="leaseName" optional="YES" attributeType="String"/>
+        <attribute name="oilCalcType" optional="YES" attributeType="String"/>
+        <attribute name="oilVol" optional="YES" attributeType="String"/>
+        <attribute name="prodID" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="waterCalcType" optional="YES" attributeType="String"/>
+        <attribute name="waterVol" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="PulseProdHome" representedClassName="PulseProdHome" syncable="YES">
+        <attribute name="allocatedVolume" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="gasComments" optional="YES" attributeType="String"/>
+        <attribute name="gasVol" optional="YES" attributeType="String"/>
+        <attribute name="lease" optional="YES" attributeType="String"/>
+        <attribute name="leaseName" optional="YES" attributeType="String"/>
+        <attribute name="oilComments" optional="YES" attributeType="String"/>
+        <attribute name="oilVol" optional="YES" attributeType="String"/>
+        <attribute name="operator" optional="YES" attributeType="String"/>
+        <attribute name="owner" optional="YES" attributeType="String"/>
+        <attribute name="prodID" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="route" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="waterComments" optional="YES" attributeType="String"/>
+        <attribute name="waterVol" optional="YES" attributeType="String"/>
+        <attribute name="wellheadComments" optional="YES" attributeType="String"/>
+        <attribute name="wellheadData" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="PumpSize" representedClassName="PumpSize" syncable="YES">
+        <attribute name="nominalSize" optional="YES" attributeType="String"/>
+        <attribute name="size" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="PumpType" representedClassName="PumpType" syncable="YES">
+        <attribute name="pumpType" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="RigReports" representedClassName="RigReports" syncable="YES">
+        <attribute name="comments" optional="YES" attributeType="String"/>
+        <attribute name="company" optional="YES" attributeType="String"/>
+        <attribute name="dailyCost" optional="YES" attributeType="String"/>
+        <attribute name="downloaded" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="engrApproval" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="entryDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="entryUser" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="lease" optional="YES" attributeType="String"/>
+        <attribute name="reportAppID" optional="YES" attributeType="String"/>
+        <attribute name="reportDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="reportID" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="rigImages" optional="YES" attributeType="Transformable"/>
+        <attribute name="rods" optional="YES" attributeType="String"/>
+        <attribute name="totalCost" optional="YES" attributeType="String"/>
+        <attribute name="tubing" optional="YES" attributeType="String"/>
+        <attribute name="wellNum" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="RigReportsPump" representedClassName="RigReportsPump" syncable="YES">
+        <attribute name="downloaded" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="inOut" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="pumpID" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="pumpLength" optional="YES" attributeType="String"/>
+        <attribute name="pumpOrder" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="pumpSize" optional="YES" attributeType="String"/>
+        <attribute name="pumpType" optional="YES" attributeType="String"/>
+        <attribute name="reportAppID" optional="YES" attributeType="String"/>
+        <attribute name="reportID" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="RigReportsRods" representedClassName="RigReportsRods" syncable="YES">
+        <attribute name="downloaded" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="inOut" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="reportAppID" optional="YES" attributeType="String"/>
+        <attribute name="reportID" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="rodCount" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="rodFootage" optional="YES" attributeType="String"/>
+        <attribute name="rodID" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="rodLength" optional="YES" attributeType="String"/>
+        <attribute name="rodOrder" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="rodSize" optional="YES" attributeType="String"/>
+        <attribute name="rodType" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="RigReportsTubing" representedClassName="RigReportsTubing" syncable="YES">
+        <attribute name="downloaded" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="inOut" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="reportAppID" optional="YES" attributeType="String"/>
+        <attribute name="reportID" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="tubingCount" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="tubingFootage" optional="YES" attributeType="String"/>
+        <attribute name="tubingID" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="tubingLength" optional="YES" attributeType="String"/>
+        <attribute name="tubingOrder" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="tubingSize" optional="YES" attributeType="String"/>
+        <attribute name="tubingType" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="RodLength" representedClassName="RodLength" syncable="YES">
+        <attribute name="nominalSize" optional="YES" attributeType="String"/>
+        <attribute name="rodLengthID" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="rodSize" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="RodSize" representedClassName="RodSize" syncable="YES">
+        <attribute name="nominalSize" optional="YES" attributeType="String"/>
+        <attribute name="rodSize" optional="YES" attributeType="String"/>
+        <attribute name="rodSizeID" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="RodType" representedClassName="RodType" syncable="YES">
+        <attribute name="rodType" optional="YES" attributeType="String"/>
+        <attribute name="rodTypeID" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="RunTickets" representedClassName="RunTickets" syncable="YES">
+        <attribute name="bottomsFeet1" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="bottomsFeet2" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="bottomsInch1" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="bottomsInch2" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="bsw" optional="YES" attributeType="String"/>
+        <attribute name="calcGrossVol" optional="YES" attributeType="String"/>
+        <attribute name="calcNetVol" optional="YES" attributeType="String"/>
+        <attribute name="carrier" optional="YES" attributeType="String"/>
+        <attribute name="comments" optional="YES" attributeType="String"/>
+        <attribute name="deleted" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="deviceID" optional="YES" attributeType="String"/>
+        <attribute name="downloaded" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="driver" optional="YES" attributeType="String"/>
+        <attribute name="entryTime" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="glMonth" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="glYear" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="grossVol" optional="YES" attributeType="String"/>
+        <attribute name="internalTicketID" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="lease" optional="YES" attributeType="String"/>
+        <attribute name="netVol" optional="YES" attributeType="String"/>
+        <attribute name="obsGrav" optional="YES" attributeType="String"/>
+        <attribute name="obsTemp" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="oilFeet1" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="oilFeet2" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="oilFraction1" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="oilFraction2" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="oilInch1" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="oilInch2" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="tankNumber" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="temp1" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="temp2" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="ticketImage" optional="YES" attributeType="String"/>
+        <attribute name="ticketNumber" optional="YES" attributeType="String"/>
+        <attribute name="ticketOption" optional="YES" attributeType="Integer 16" usesScalarValueType="YES"/>
+        <attribute name="ticketTime" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="timeOff" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="timeOn" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="userid" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="Schedules" representedClassName="Schedules" syncable="YES">
+        <attribute name="acctComments" optional="YES" attributeType="String"/>
+        <attribute name="actEndUserID" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="actStartUserID" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="actualEndDt" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="actualStartDt" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="criticalEndDt" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="downloaded" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="engrComments" optional="YES" attributeType="String"/>
+        <attribute name="entryUserID" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="fieldComments" optional="YES" attributeType="String"/>
+        <attribute name="initialPlanStartDt" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="lease" optional="YES" attributeType="String"/>
+        <attribute name="planStartDt" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="scheduleID" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="scheduleType" optional="YES" attributeType="String"/>
+        <attribute name="status" optional="YES" attributeType="String"/>
+        <attribute name="updatedPlanStartDt" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="updatedPlanUserID" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="wellNumber" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="ScheduleType" representedClassName="ScheduleType" syncable="YES">
+        <attribute name="category" optional="YES" attributeType="String"/>
+        <attribute name="scheduleTypeID" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="type" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="TankGaugeEntry" representedClassName="TankGaugeEntry" syncable="YES">
+        <attribute name="bswVol" optional="YES" attributeType="String"/>
+        <attribute name="bswVol24" optional="YES" attributeType="String"/>
+        <attribute name="calc24Bbls" optional="YES" attributeType="String"/>
+        <attribute name="calcBbls" optional="YES" attributeType="String"/>
+        <attribute name="comments" optional="YES" attributeType="String"/>
+        <attribute name="deviceID" optional="YES" attributeType="String"/>
+        <attribute name="downloaded" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="entryTime" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="gaugeTime" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="hr24GgDt" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="lastGgDt" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="lease" optional="YES" attributeType="String"/>
+        <attribute name="negProdQC" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="oilFeet1" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="oilFeet2" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="oilFeet3" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="oilFeet4" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="oilFeet5" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="oilFeet6" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="oilFeet7" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="oilFeet8" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="oilFeet9" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="oilFeet10" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="onHandOil" optional="YES" attributeType="String"/>
+        <attribute name="runTicketVol" optional="YES" attributeType="String"/>
+        <attribute name="runTicketVol24" optional="YES" attributeType="String"/>
+        <attribute name="tankGaugeID" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="tankID1" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="tankID2" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="tankID3" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="tankID4" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="tankID5" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="tankID6" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="tankID7" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="tankID8" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="tankID9" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="tankID10" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="userid" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="Tanks" representedClassName="Tanks" syncable="YES">
+        <attribute name="current" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="lease" optional="YES" attributeType="String"/>
+        <attribute name="rrc" optional="YES" attributeType="String"/>
+        <attribute name="tankID" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="tankType" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="TankStrappings" representedClassName="TankStrappings" syncable="YES">
+        <attribute name="inc1" optional="YES" attributeType="String"/>
+        <attribute name="inc2" optional="YES" attributeType="String"/>
+        <attribute name="inc3" optional="YES" attributeType="String"/>
+        <attribute name="inc4" optional="YES" attributeType="String"/>
+        <attribute name="inc5" optional="YES" attributeType="String"/>
+        <attribute name="inc6" optional="YES" attributeType="String"/>
+        <attribute name="inc7" optional="YES" attributeType="String"/>
+        <attribute name="inc8" optional="YES" attributeType="String"/>
+        <attribute name="inc9" optional="YES" attributeType="String"/>
+        <attribute name="inc10" optional="YES" attributeType="String"/>
+        <attribute name="rrc" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="TubingLength" representedClassName="TubingLength" syncable="YES">
+        <attribute name="nominalSize" optional="YES" attributeType="String"/>
+        <attribute name="tbgLength" optional="YES" attributeType="String"/>
+        <attribute name="tbgLengthID" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="TubingSize" representedClassName="TubingSize" syncable="YES">
+        <attribute name="nominalSize" optional="YES" attributeType="String"/>
+        <attribute name="tbgSize" optional="YES" attributeType="String"/>
+        <attribute name="tbgSizeID" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="TubingType" representedClassName="TubingType" syncable="YES">
+        <attribute name="tbgType" optional="YES" attributeType="String"/>
+        <attribute name="tbgTypeID" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="WaterMeterData" representedClassName="WaterMeterData" syncable="YES">
+        <attribute name="checkTime" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="comments" optional="YES" attributeType="String"/>
+        <attribute name="currentFlow" optional="YES" attributeType="String"/>
+        <attribute name="deviceID" optional="YES" attributeType="String"/>
+        <attribute name="downloaded" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="entryTime" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="lease" optional="YES" attributeType="String"/>
+        <attribute name="location" optional="YES" attributeType="String"/>
+        <attribute name="meterNum" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="meterProblem" optional="YES" attributeType="String"/>
+        <attribute name="netFlow" optional="YES" attributeType="String"/>
+        <attribute name="resetVolume" optional="YES" attributeType="String"/>
+        <attribute name="time24Hr" optional="YES" attributeType="String"/>
+        <attribute name="totalVolume" optional="YES" attributeType="String"/>
+        <attribute name="userid" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="vol24Hr" optional="YES" attributeType="String"/>
+        <attribute name="wmdID" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="yesterdayFlow" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="WaterPumpInfo" representedClassName="WaterPumpInfo" syncable="YES">
+        <attribute name="brand" optional="YES" attributeType="String"/>
+        <attribute name="crankcaseOilCap" optional="YES" attributeType="String"/>
+        <attribute name="crankExtD" optional="YES" attributeType="String"/>
+        <attribute name="crankExtL" optional="YES" attributeType="String"/>
+        <attribute name="fluidEnd" optional="YES" attributeType="String"/>
+        <attribute name="keywayDepth" optional="YES" attributeType="String"/>
+        <attribute name="keywayWidth" optional="YES" attributeType="String"/>
+        <attribute name="maxBHP" optional="YES" attributeType="String"/>
+        <attribute name="maxBPD" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="maxGPM" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="maxPlungerD" optional="YES" attributeType="String"/>
+        <attribute name="maxPressure" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="maxSheaveD" optional="YES" attributeType="String"/>
+        <attribute name="minPlungerD" optional="YES" attributeType="String"/>
+        <attribute name="newName" optional="YES" attributeType="String"/>
+        <attribute name="oldName" optional="YES" attributeType="String"/>
+        <attribute name="plungerAction" optional="YES" attributeType="String"/>
+        <attribute name="plungerLoad" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="pumpID" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="pumpTitle" optional="YES" attributeType="String"/>
+        <attribute name="pumpType" optional="YES" attributeType="String"/>
+        <attribute name="rpMatBHP" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="stroke" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="WBDCasingTubing" representedClassName="WBDCasingTubing" syncable="YES" codeGenerationType="class">
+        <attribute name="cmtCalcToC" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="cmtDesc" optional="YES" attributeType="String"/>
+        <attribute name="cmtSxQty" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="cmtToC" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="cmtVerificationType" optional="YES" attributeType="String"/>
+        <attribute name="cmtVerifiedToC" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="cmtVolSlurry" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="coating" optional="YES" attributeType="String"/>
+        <attribute name="endDepth" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="extSize" optional="YES" attributeType="String"/>
+        <attribute name="extSizeID" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="infoDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="infoSource" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="invLinker" optional="YES" attributeType="String"/>
+        <attribute name="invQty" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="lease" optional="YES" attributeType="String"/>
+        <attribute name="length" optional="YES" attributeType="String"/>
+        <attribute name="segmentID" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="segmentOrder" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="startDepth" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="threadType" optional="YES" attributeType="String"/>
+        <attribute name="tubularType" optional="YES" attributeType="String"/>
+        <attribute name="wbCasing" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="wbCasingTubingID" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="wbDateIn" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="wbQty" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="wbTubing" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="weight" optional="YES" attributeType="String"/>
+        <attribute name="wellNum" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="WBDInfo" representedClassName="WBDInfo" syncable="YES" codeGenerationType="class">
+        <attribute name="infoDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="infoID" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="infoNotes" optional="YES" attributeType="String"/>
+        <attribute name="infoSource" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="infoSourceType" optional="YES" attributeType="String"/>
+        <attribute name="lease" optional="YES" attributeType="String"/>
+        <attribute name="recordID" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="tblName" optional="YES" attributeType="String"/>
+        <attribute name="wellNum" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="WBDInfoSource" representedClassName="WBDInfoSource" syncable="YES" codeGenerationType="class">
+        <attribute name="infoSourceType" optional="YES" attributeType="String"/>
+        <attribute name="sourceID" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="WBDPerfs" representedClassName="WBDPerfs" syncable="YES" codeGenerationType="class">
+        <attribute name="lease" optional="YES" attributeType="String"/>
+        <attribute name="perfDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="perfDesc" optional="YES" attributeType="String"/>
+        <attribute name="perfID" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="perfZoneEnd" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="perfZoneStart" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="wellNum" optional="YES" attributeType="String"/>
+        <attribute name="wellPerf" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="WBDPlugs" representedClassName="WBDPlugs" syncable="YES" codeGenerationType="class">
+        <attribute name="comments" optional="YES" attributeType="String"/>
+        <attribute name="infoDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="infoNotes" optional="YES" attributeType="String"/>
+        <attribute name="infoSource" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="lease" optional="YES" attributeType="String"/>
+        <attribute name="plugDateIn" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="plugDepth" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="plugID" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="plugModel" optional="YES" attributeType="String"/>
+        <attribute name="plugType" optional="YES" attributeType="String"/>
+        <attribute name="wellNum" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="WBDPumps" representedClassName="WBDPumps" syncable="YES" codeGenerationType="class">
+        <attribute name="infoNotes" optional="YES" attributeType="String"/>
+        <attribute name="infoSource" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="lease" optional="YES" attributeType="String"/>
+        <attribute name="pumpDateIn" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="pumpDesc" optional="YES" attributeType="String"/>
+        <attribute name="pumpID" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="pumpTypeName" optional="YES" attributeType="String"/>
+        <attribute name="wellNum" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="WBDRods" representedClassName="WBDRods" syncable="YES" codeGenerationType="class">
+        <attribute name="couplingCode" optional="YES" attributeType="String"/>
+        <attribute name="extSize" optional="YES" attributeType="String"/>
+        <attribute name="extSizeID" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="infoSource" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="invRodsQty" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="lease" optional="YES" attributeType="String"/>
+        <attribute name="length" optional="YES" attributeType="String"/>
+        <attribute name="rodType" optional="YES" attributeType="String"/>
+        <attribute name="segmentID" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="segmentOrder" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="wbRodsDesc" optional="YES" attributeType="String"/>
+        <attribute name="wbRodsDtIn" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="wbRodsID" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="wbRodsQty" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="wellNum" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="WBDSurveys" representedClassName="WBDSurveys" syncable="YES" codeGenerationType="class">
+        <attribute name="comments" optional="YES" attributeType="String"/>
+        <attribute name="dogLegSeverity" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="inclination" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="lease" optional="YES" attributeType="String"/>
+        <attribute name="md" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="minHoleSize" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="surveyPointDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="surveyPointID" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="trueAzimuth" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="tvd" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="wellNum" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="WBDTreatments" representedClassName="WBDTreatments" syncable="YES" codeGenerationType="class">
+        <attribute name="downloaded" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="lease" optional="YES" attributeType="String"/>
+        <attribute name="treatmentDate" optional="YES" attributeType="String"/>
+        <attribute name="treatmentDesc" optional="YES" attributeType="String"/>
+        <attribute name="treatmentID" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="treatmentNotes" optional="YES" attributeType="String"/>
+        <attribute name="wellNum" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="WellheadData" representedClassName="WellheadData" syncable="YES">
+        <attribute name="bradenheadPressure" optional="YES" attributeType="String"/>
+        <attribute name="casingPressure" optional="YES" attributeType="String"/>
+        <attribute name="checkTime" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="choke" optional="YES" attributeType="String"/>
+        <attribute name="comments" optional="YES" attributeType="String"/>
+        <attribute name="dataID" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="deviceID" optional="YES" attributeType="String"/>
+        <attribute name="downloaded" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="emulsionCut" optional="YES" attributeType="String"/>
+        <attribute name="entryTime" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="espAmp" optional="YES" attributeType="String"/>
+        <attribute name="espHz" optional="YES" attributeType="String"/>
+        <attribute name="lease" optional="YES" attributeType="String"/>
+        <attribute name="oilCut" optional="YES" attributeType="String"/>
+        <attribute name="pound" optional="YES" attributeType="String"/>
+        <attribute name="prodType" optional="YES" attributeType="String"/>
+        <attribute name="pumpSize" optional="YES" attributeType="String"/>
+        <attribute name="spm" optional="YES" attributeType="String"/>
+        <attribute name="statusArrival" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="statusDepart" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="strokeSize" optional="YES" attributeType="String"/>
+        <attribute name="timeOff" optional="YES" attributeType="String"/>
+        <attribute name="timeOn" optional="YES" attributeType="String"/>
+        <attribute name="tubingPressure" optional="YES" attributeType="String"/>
+        <attribute name="userid" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="waterCut" optional="YES" attributeType="String"/>
+        <attribute name="wellNumber" optional="YES" attributeType="String"/>
+        <attribute name="wellOn" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="wellProblem" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="WellList" representedClassName="WellList" syncable="YES">
+        <attribute name="grandparentPropNum" optional="YES" attributeType="String"/>
+        <attribute name="lease" optional="YES" attributeType="String"/>
+        <attribute name="prodCat" optional="YES" attributeType="String"/>
+        <attribute name="rrcLease" optional="YES" attributeType="String"/>
+        <attribute name="wellID" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="wellNumber" optional="YES" attributeType="String"/>
+    </entity>
+    <elements>
+        <element name="GasMeterData" positionX="99" positionY="567" width="128" height="285"/>
+        <element name="InvoiceAccounts" positionX="-56" positionY="639" width="128" height="270"/>
+        <element name="Invoices" positionX="-216" positionY="360" width="128" height="570"/>
+        <element name="InvoicesDetail" positionX="-227" positionY="828" width="128" height="180"/>
+        <element name="InvoicesPersonnel" positionX="9" positionY="180" width="128" height="135"/>
+        <element name="LeaseRoutes" positionX="-45" positionY="27" width="128" height="75"/>
+        <element name="ListAssetLocations" positionX="-191" positionY="222" width="128" height="120"/>
+        <element name="ListCompany" positionX="-47" positionY="153" width="128" height="73"/>
+        <element name="ListMeterProblem" positionX="-191" positionY="135" width="128" height="75"/>
+        <element name="ListWellProblem" positionX="-191" positionY="27" width="128" height="75"/>
+        <element name="Meters" positionX="295" positionY="162" width="128" height="180"/>
+        <element name="Personnel" positionX="99" positionY="27" width="128" height="195"/>
+        <element name="Production" positionX="99" positionY="378" width="128" height="255"/>
+        <element name="ProductionAvg" positionX="-47" positionY="261" width="128" height="300"/>
+        <element name="ProductionAvgField" positionX="-27" positionY="171" width="128" height="315"/>
+        <element name="ProductionField" positionX="-27" positionY="171" width="128" height="255"/>
+        <element name="PulseProdField" positionX="-27" positionY="171" width="128" height="195"/>
+        <element name="PulseProdHome" positionX="99" positionY="150" width="128" height="285"/>
+        <element name="PumpSize" positionX="0" positionY="171" width="128" height="75"/>
+        <element name="PumpType" positionX="9" positionY="180" width="128" height="60"/>
+        <element name="RigReports" positionX="898" positionY="27" width="128" height="285"/>
+        <element name="RigReportsPump" positionX="18" positionY="189" width="128" height="180"/>
+        <element name="RigReportsRods" positionX="27" positionY="198" width="128" height="210"/>
+        <element name="RigReportsTubing" positionX="36" positionY="207" width="128" height="210"/>
+        <element name="RodLength" positionX="196" positionY="396" width="128" height="90"/>
+        <element name="RodSize" positionX="45" positionY="216" width="128" height="90"/>
+        <element name="RodType" positionX="196" positionY="636" width="128" height="75"/>
+        <element name="RunTickets" positionX="745" positionY="495" width="128" height="615"/>
+        <element name="Schedules" positionX="747" positionY="135" width="128" height="345"/>
+        <element name="ScheduleType" positionX="745" positionY="27" width="128" height="90"/>
+        <element name="TankGaugeEntry" positionX="594" positionY="27" width="128" height="613"/>
+        <element name="Tanks" positionX="295" positionY="27" width="128" height="120"/>
+        <element name="TankStrappings" positionX="441" positionY="522" width="128" height="210"/>
+        <element name="TubingLength" positionX="189" positionY="504" width="128" height="90"/>
+        <element name="TubingSize" positionX="196" positionY="279" width="128" height="90"/>
+        <element name="TubingType" positionX="196" positionY="189" width="128" height="75"/>
+        <element name="WaterMeterData" positionX="297" positionY="564" width="128" height="313"/>
+        <element name="WaterPumpInfo" positionX="898" positionY="378" width="128" height="390"/>
+        <element name="WBDCasingTubing" positionX="18" positionY="216" width="128" height="480"/>
+        <element name="WBDInfo" positionX="-27" positionY="171" width="128" height="180"/>
+        <element name="WBDInfoSource" positionX="-9" positionY="189" width="128" height="75"/>
+        <element name="WBDPerfs" positionX="-27" positionY="171" width="128" height="165"/>
+        <element name="WBDPlugs" positionX="-27" positionY="171" width="128" height="210"/>
+        <element name="WBDPumps" positionX="0" positionY="198" width="128" height="165"/>
+        <element name="WBDRods" positionX="18" positionY="216" width="128" height="270"/>
+        <element name="WBDSurveys" positionX="-27" positionY="171" width="128" height="210"/>
+        <element name="WBDTreatments" positionX="-18" positionY="180" width="128" height="150"/>
+        <element name="WellheadData" positionX="448" positionY="27" width="128" height="480"/>
+        <element name="WellList" positionX="295" positionY="429" width="128" height="135"/>
+    </elements>
+</model>
