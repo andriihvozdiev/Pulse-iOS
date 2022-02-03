@@ -1,0 +1,86 @@
+PODS:
+  - ActionSheetPicker-3.0 (2.3.0)
+  - AFNetworking (4.0.1):
+    - AFNetworking/NSURLSession (= 4.0.1)
+    - AFNetworking/Reachability (= 4.0.1)
+    - AFNetworking/Security (= 4.0.1)
+    - AFNetworking/Serialization (= 4.0.1)
+    - AFNetworking/UIKit (= 4.0.1)
+  - AFNetworking/NSURLSession (4.0.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (4.0.1)
+  - AFNetworking/Security (4.0.1)
+  - AFNetworking/Serialization (4.0.1)
+  - AFNetworking/UIKit (4.0.1):
+    - AFNetworking/NSURLSession
+  - FSCalendar (2.8.0)
+  - JBChartView (3.0.13)
+  - MCActivityButton (0.2.1)
+  - PINCache (3.0.3):
+    - PINCache/Arc-exception-safe (= 3.0.3)
+    - PINCache/Core (= 3.0.3)
+  - PINCache/Arc-exception-safe (3.0.3):
+    - PINCache/Core
+  - PINCache/Core (3.0.3):
+    - PINOperation (~> 1.2.1)
+  - PINOperation (1.2.1)
+  - PINRemoteImage (3.0.3):
+    - PINRemoteImage/PINCache (= 3.0.3)
+  - PINRemoteImage/Core (3.0.3):
+    - PINOperation
+  - PINRemoteImage/PINCache (3.0.3):
+    - PINCache (~> 3.0.3)
+    - PINRemoteImage/Core
+  - SDWebImage (3.8.2):
+    - SDWebImage/Core (= 3.8.2)
+  - SDWebImage/Core (3.8.2)
+  - Toast (4.0.0)
+  - TOPasscodeViewController (0.0.2)
+  - UIActivityIndicator-for-SDWebImage (1.2):
+    - SDWebImage (~> 3.7)
+
+DEPENDENCIES:
+  - ActionSheetPicker-3.0
+  - AFNetworking (~> 4.0)
+  - FSCalendar
+  - JBChartView
+  - MCActivityButton (~> 0.2)
+  - PINRemoteImage (~> 3.0)
+  - Toast (~> 4.0.0)
+  - TOPasscodeViewController
+  - UIActivityIndicator-for-SDWebImage
+
+SPEC REPOS:
+  trunk:
+    - ActionSheetPicker-3.0
+    - AFNetworking
+    - FSCalendar
+    - JBChartView
+    - MCActivityButton
+    - PINCache
+    - PINOperation
+    - PINRemoteImage
+    - SDWebImage
+    - Toast
+    - TOPasscodeViewController
+    - UIActivityIndicator-for-SDWebImage
+
+SPEC CHECKSUMS:
+  ActionSheetPicker-3.0: eef157d75e151f255c5333d26656c7fbfe905a51
+  AFNetworking: 3bd23d814e976cd148d7d44c3ab78017b744cd58
+  FSCalendar: 3a5ed3636e2ba1b83ebebfcf0c2603105a6f5efe
+  JBChartView: ea240dca7b83a92f47d4ae766beb3714753988a1
+  MCActivityButton: 9bc9d05bd5bd72d2f0a386fb611fe5b5bcae5e51
+  PINCache: 7a8fc1a691173d21dbddbf86cd515de6efa55086
+  PINOperation: 00c935935f1e8cf0d1e2d6b542e75b88fc3e5e20
+  PINRemoteImage: f1295b29f8c5e640e25335a1b2bd9d805171bd01
+  SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
+  Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
+  TOPasscodeViewController: 03b5df3762a7be1511102093c644a42275bddf24
+  UIActivityIndicator-for-SDWebImage: 7bf7ebbf0ed1747dedc0d6e949c4603a6d0f9e0c
+
+PODFILE CHECKSUM: b4abce7c21a481a608afee185fdae237dd36c67c
+
+COCOAPODS: 1.12.1
